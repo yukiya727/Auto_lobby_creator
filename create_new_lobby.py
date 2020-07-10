@@ -126,8 +126,8 @@ def load_replay():
         new_steps.append(new_step)
         pause = False
         id += 1
-    for item in new_steps:
-        print(item)
+    # for item in new_steps:
+    #     print(item)
     # print("Recorded objects:", len(new_steps))
     # print(new_steps[0][-1])
     return new_steps, float(new_steps[0][-1])
