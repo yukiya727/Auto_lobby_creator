@@ -128,8 +128,8 @@ def load_replay():
         id += 1
     for item in new_steps:
         print(item)
-    print("Recorded objects:", len(new_steps))
-    print(new_steps[0][-1])
+    # print("Recorded objects:", len(new_steps))
+    # print(new_steps[0][-1])
     return new_steps, float(new_steps[0][-1])
 
 
@@ -199,11 +199,12 @@ def play(log, speed, tlast, debug_mode):
                 print(time.time() - timer)
             pass
 
-
-# openfile("pynput_record", "history1.txt")
-# l, t = load_replay()
-# play(l, 1, t, True)
-openfile("pynput_record", "history1.txt")
+first_lobby = input("Is this the first multiplayer lobby since game was opened? (y/n)")
+if first_lobby == "y":
+    openfile("pynput_record", "westus1stlobby.txt")
+    l, t = load_replay()
+    play(l, 1, t, True)
+openfile("pynput_record", "westuslobby.txt")
 l, t = load_replay()
 while True:
     play(l, 1, t, True)
