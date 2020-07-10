@@ -6,7 +6,7 @@ Run "create_new_lobby.py" to start the program
 
 Press "ALT + ." to create a lobby each time
 
-The script does not need to be terminated and restart each time creating a new lobby
+The script does not need to be terminated and restarted each time creating a new lobby
 
 When done, simply close the script
 
