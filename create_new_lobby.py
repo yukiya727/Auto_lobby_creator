@@ -134,9 +134,9 @@ def load_replay():
 
 
 def play(log, speed, tlast, debug_mode):
+    print("Ready, press 'alt + .' to start")
+    keyboard.wait("alt+.")
     if debug_mode:
-        print("Ready, press 'alt + .' to start")
-        keyboard.wait("alt+.")
         timer = time.time()
     t_offset = time.time()
     tlast -= 0.1
@@ -203,8 +203,8 @@ first_lobby = input("Is this the first multiplayer lobby since game was opened? 
 if first_lobby == "y":
     openfile("pynput_record", "westus1stlobby.txt")
     l, t = load_replay()
-    play(l, 1, t, True)
+    play(l, 1, t, False)
 openfile("pynput_record", "westuslobby.txt")
 l, t = load_replay()
 while True:
-    play(l, 1, t, True)
+    play(l, 1, t, False)
