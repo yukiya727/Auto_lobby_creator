@@ -58,19 +58,18 @@ def Keystring(str):
 
 
 def load_replay():
-    global skip, startcount, k_last, t_last, lag_limit, k, id, temp_step
+    global k
 
     new_steps = []
     temp_step = []
     k_last = ""
     temp_step = ""
     skip = False
-    startcount = False
     pause = False
-    id = 0
+    startcount = False
     t_last = 0.0
     t_temp = 0.0
-    lag_limit = 0.00
+    lag_limit = 0.0
     id = 0
 
     for step in steps:
