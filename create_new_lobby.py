@@ -208,4 +208,3 @@ openfile("pynput_record", "westuslobby.txt")
 l, t = load_replay()
 while True:
     play(l, 1, t, False)
-    # test
