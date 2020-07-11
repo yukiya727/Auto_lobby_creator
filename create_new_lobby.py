@@ -27,13 +27,6 @@ def openfile(dname, fname):
 
 
 # clean steps
-new_steps = []
-temp_step = []
-t_last = 0.0
-t_temp = 0.0
-id = 0
-startcount = False
-pause = False
 
 SpecialKeys = [
     "ctrl", "alt", "shift", "win"
@@ -62,16 +55,24 @@ def Keystring(str):
     return str
 
 
-lag_limit = 0.00
-k_last = ""
-temp_step = ""
-skip = False
-startcount = False
-id = 0
 
 
 def load_replay():
     global skip, startcount, k_last, t_last, lag_limit, k, id, temp_step
+
+    new_steps = []
+    temp_step = []
+    k_last = ""
+    temp_step = ""
+    skip = False
+    startcount = False
+    pause = False
+    id = 0
+    t_last = 0.0
+    t_temp = 0.0
+    lag_limit = 0.00
+    id = 0
+
     for step in steps:
         new_step = []
         k = False
@@ -105,7 +106,6 @@ def load_replay():
                 t_last = float(new_step[-1])
             if new_step[0] == 'start':
                 startcount = True
-                # new_steps.append(new_step)
                 continue
             continue
 
@@ -128,7 +128,7 @@ def load_replay():
         id += 1
     # for item in new_steps:
     #     print(item)
-    # print("Recorded objects:", len(new_steps))
+    print("Recorded objects:", len(new_steps))
     # print(new_steps[0][-1])
     return new_steps, float(new_steps[0][-1])
 
