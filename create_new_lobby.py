@@ -1,4 +1,3 @@
-# -*- coding: cp950 -*-
 import time
 import os
 import sys
@@ -20,13 +19,11 @@ def openfile(dname, fname):
     file_name = fname
     file_path = os.path.join(dir_path, file_name)
 
-    # print(dir_path)
     # open the recording file
     with open(file_path, 'r') as f:
         steps = f.readlines()
 
 
-# clean steps
 
 SpecialKeys = [
     "ctrl", "alt", "shift", "win"
